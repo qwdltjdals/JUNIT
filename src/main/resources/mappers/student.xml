@@ -7,4 +7,12 @@
         insert into student_tb
         values (default, #{name}, #{age})
     </insert>
+    <select id="findById" resultType="com.study.tdd.entity.Student">
+        select
+            *
+        from
+            student_tb
+        were
+            id = #{id}
+    </select>
 </mapper>
